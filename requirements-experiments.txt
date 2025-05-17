@@ -1,0 +1,24 @@
+seaborn==0.12.2
+openml==0.14.1
+numba>=0.58.1
+shap>=0.44.1
+# Dist Shift Datasets
+folktables==0.0.12
+# Hyperopt
+hyperopt==0.2.7
+ray<2.7.0 # required by autogluon 1.0.0
+
+# Baselines
+lightgbm==3.3.5
+xgboost>=2.0.0
+catboost>=1.1.1
+
+# Wildtime
+torchvision>=0.15.0
+pytorch_widedeep==1.3.2
+
+# ---- Deep Baselines (uncomment to install as part of your environment)
+# -- Install hyperfast from custom branch with bugfixes and --no-deps install.
+# git+https://github.com/LennartPurucker/HyperFast.git@main#egg=hyperfast
+# -- Old TabPFN Version (requirements should already be satisfied at this point, install from GitHub for newest version)
+# git+https://github.com/automl/TabPFN.git@main#egg=tabpfn

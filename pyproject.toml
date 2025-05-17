@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "drift-resilient-tabpfn"
+version = "1.0.0"
+dynamic = ["dependencies"]
+
+[tool.setuptools]
+packages = [
+    "tabpfn",
+    "tabpfn.model",
+    "tabpfn.model_cache",
+    "tabpfn.scripts",
+    "tabpfn.scripts.tabular_metrics",
+    "tabpfn.scripts.estimator",
+    "tabpfn.scripts.tabular_baselines",
+    "tabpfn.scripts.tabular_baselines.methods",
+    "tabpfn.datasets",
+]
+
+[tool.setuptools.package-data]
+"tabpfn.model_cache" = ["*.cpkt"]
+"tabpfn.datasets" = ["data/*.csv", "data/2-Moons/*.npy"]
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements-release.txt", "requirements-experiments.txt"]}

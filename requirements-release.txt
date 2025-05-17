@@ -1,0 +1,16 @@
+# It is recommended to use python >= 3.9
+
+torch>=2.1,<2.2         # the default is that this includes cuda support (at least in torch 2.1), torch 2.2 seems to only support flash-attn2
+scikit-learn>=1.4.2,<1.6
+tqdm>=4.66.1
+numpy>=1.21.2
+pre-commit>=3.3.3
+einops>=0.6.0
+scipy>=1.8.0
+torchmetrics==1.2.0
+pytest>=7.1.3
+pandas[plot, output_formatting]>=2.0.3
+pyyaml>=6.0.1
+
+# -- Preprocessing dependencies
+kditransform>=0.2.0
